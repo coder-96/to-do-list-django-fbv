@@ -1,0 +1,275 @@
+@import url("https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;700&display=swap");
+* {
+    background-color: rgb(255, 255, 255);
+    font-family: "Ubuntu", sans-serif;
+}
+
+/* navbar.html */
+
+.about {
+    font-size: 1.5rem;
+}
+
+/* todo-list.html */
+
+.search-add {
+    margin-top: 2rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.search-add form input {
+    padding: 0 5px;
+    height: 4rem;
+    text-align: center;
+}
+.search-add a {
+    padding: 20px 80px;
+    font-weight: 400;
+    text-align: center;
+}
+
+.tasks {
+    margin-top: 1rem;
+    text-align: center;
+}
+
+.todos {
+    font-size: 24px;
+    margin: 0 100px 0 200px;
+}
+
+@media (min-width: 490px) and (max-width: 992px) {
+    /* todo-list.html */
+    .todos {
+        font-size: 20px;
+        margin: 0 100px;
+    }
+}
+
+@media (min-width: 490px) and (max-width: 650px) {
+    /* todo-list.html */
+    .todos {
+        font-size: 16px;
+        margin: 0;
+    }
+}
+
+.todos ul {
+    display: grid;
+    row-gap: 1rem;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+}
+
+.todos > ul > li {
+    grid-column: span 3 / span 3;
+}
+
+.todos > ul > a {
+    max-width: 50px;
+}
+
+.todos > ul > a > svg {
+    background-color: wheat;
+    width: 1.8rem;
+    border-radius: 50%;
+    padding: 4px;
+}
+
+.todos > ul > a > svg:hover {
+    background-color: rgb(192, 186, 177);
+    border-radius: 50%;
+    padding: 3px;
+}
+
+/* todo_form.html */
+/* todo_update.html */
+
+.create {
+    margin: 4rem;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.create h1 {
+    padding: 0 5px;
+    width: 100vw;
+    text-align: center;
+}
+
+/* checkbox styling */
+
+.create input[type="checkbox"] {
+    appearance: none;
+    width: 60px;
+    aspect-ratio: 1;
+    border-radius: 8px;
+    border: 2px solid black;
+    position: relative;
+    transition: all 0.2s ease-in-out;
+}
+
+.create input[type="checkbox"]::before {
+    font-family: "Ubuntu", sans-serif;
+    position: absolute;
+    bottom: -4px;
+    left: 10px;
+    content: "✔";
+    font-size: 50px;
+    color: rgb(255, 153, 0);
+    transform: scale(0);
+    transition: all 0.2s ease-in-out;
+}
+
+.create input[type="checkbox"]:checked::before {
+    animation: zoom 0.5s ease-in-out;
+    transform: scale(1);
+}
+
+@keyframes zoom {
+    0% {
+        transform: scale(0);
+    }
+
+    20% {
+        transform: scale(1.5);
+    }
+
+    40% {
+        transform: scale(0.5);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+
+    70% {
+        transform: scale(1.2);
+    }
+
+    90% {
+        transform: scale(0.8);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* checkbox styling */
+
+.create input {
+    padding: 0 5px;
+    height: 4rem;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.create label {
+    padding: 0 5px;
+    height: 4rem;
+    text-align: center;
+    border-radius: 8px;
+    display: block;
+    font-size: 1.5rem;
+}
+
+.submit {
+    padding: 20px 80px;
+    width: 21rem;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+}
+
+/* todo_delete.html */
+
+.cancel {
+    padding: 15px 80px;
+    width: 14rem;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1.5rem;
+    width: 21rem;
+}
+
+.create p {
+    font-size: 1.5rem;
+}
+
+.create span {
+    color: red;
+}
+
+/* update_user.html */
+/* password_update.html reused the styles*/
+
+.user-update-links {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.password-update,
+.user-delete {
+    margin: 1rem 0 1rem 0;
+    padding: 10px 80px;
+    width: 40vw;
+    font-weight: 400;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.user-delete:hover {
+    background-color: red;
+}
+
+/* signin.html */
+
+@media (min-width: 0px) and (max-width: 490px) {
+    /* todo-list.html */
+
+    .search-add a {
+        padding: 20px 90px;
+        font-weight: 400;
+        text-align: center;
+    }
+
+    .tasks {
+        margin: 2rem 0;
+        font-size: 12px;
+    }
+
+    .todos {
+        font-size: 14px;
+        margin: 0px;
+    }
+}
+
+.login {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.login label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+.register {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    text-align: center;
+}
+
+.register label {
+    font-size: 1.5rem;
+    font-weight: 400;
+}

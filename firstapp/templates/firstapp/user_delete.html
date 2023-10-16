@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<div class="create">
+    <form method="POST" action="">
+        {% csrf_token %}
+        <p>Are you sure you want to delete user <span>"{{ object }}"</span>?</p>
+
+        <a class="btn btn-light cancel" href="{{ request.META.HTTP_REFERER }}">Go back</a>
+        <input class="btn btn-light submit" type="submit" value="Confirm">
+    </form>
+</div>
+
+{% endblock %}

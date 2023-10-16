@@ -1,0 +1,40 @@
+<header class="p-3 mb-3 border-bottom">
+    <div class="container">
+      <div class="d-flex flex-wrap align-items-center justify-content-center justify-content-lg-start">
+        <a href="/" class="d-flex align-items-center mb-2 mb-lg-0 link-body-emphasis text-decoration-none">
+          <svg class="bi me-2" width="40" height="32" role="img" aria-label="Bootstrap"><use xlink:href="#bootstrap"></use></svg>
+        </a>
+
+        <ul class="nav col-12 col-lg-auto me-lg-auto mb-2 justify-content-center mb-md-0">
+            {% if page == "home" %}
+          <li><a href="{% url 'about' %}" class="nav-link px-2 link-secondary link-opacity-50-hover about">About</a></li>
+            {% else %}
+          <li><a href="{% url 'home' %}" class="nav-link px-2 link-secondary link-opacity-50-hover about">Home</a></li>
+          <li><a href="{% url 'about' %}" class="nav-link px-2 link-secondary link-opacity-50-hover about">About</a></li>
+            {% endif %}
+        </ul>
+
+        <div class="dropdown text-end">
+          <a href="#" class="d-block link-body-emphasis text-decoration-none dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
+              {% if request.user.avatar %}
+            <img src="{{ request.user.avatar.url }}" alt="mdo" width="32" height="32" class="rounded-circle">
+              {% else %}
+            <img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" class="rounded-circle">
+              {%endif%}
+          </a>
+          <ul class="dropdown-menu text-small" style="">
+
+      {%if request.user.is_authenticated%}
+            <li><a class="dropdown-item" href="{% url 'user_update' %}">Profile</a></li>
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'logout' %}">Sign out</a></li>
+      {%else%}
+            <li><hr class="dropdown-divider"></li>
+            <li><a class="dropdown-item" href="{% url 'login' %}">Sign in</a></li>
+      {%endif%}
+
+          </ul>
+        </div>
+      </div>
+    </div>
+  </header>
