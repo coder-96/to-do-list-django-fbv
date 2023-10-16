@@ -50,6 +50,8 @@ Users should be able to:
 ### Screenshot
 
 <p float="left">
+  <img src="./screenshots/mobile-v-homepage.jpg" alt="mobile-homepage" width="200"/>
+  <img src="./screenshots/mobile-v-login.jpg" alt="mobile-login" width="200"/>
   <img src="./screenshots/desktop-v-homepage.jpg" alt="homepage" width="200"/>
   <img src="./screenshots/desktop-v-create-todo.jpg" alt="create-todo" width="200"/>
   <img src="./screenshots/desktop-v-update-todo.jpg" alt="update-todo" width="200"/>
@@ -57,8 +59,6 @@ Users should be able to:
   <img src="./screenshots/desktop-v-login.jpg" alt="login" width="200"/>
   <img src="./screenshots/desktop-v-registration.jpg" alt="register" width="200"/>
   <img src="./screenshots/desktop-v-update-user.jpg" alt="user-update" width="200"/>
-  <img src="./screenshots/mobile-v-homepage.jpg" alt="mobile-homepage" width="200"/>
-  <img src="./screenshots/mobile-v-login.jpg" alt="mobile-login" width="200"/>
 </p>
 
 ### Links
